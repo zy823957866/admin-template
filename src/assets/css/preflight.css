@@ -1,0 +1,46 @@
+/**
+ * Preflight - border 初始化
+ * 补齐 Tailwind v4 preflight 的 border reset（当前项目未安装 tailwindcss，
+ * 原先的 @import 'tailwindcss' 实际为空，导致 section/header 等元素
+ * 没有 border:0 solid 初始化，出现边框不显示 / 默认 3px 粗边的问题）。
+ */
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	border-width: 0;
+	border-style: solid;
+	border-color: currentColor;
+}
+
+ol,
+ul,
+menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}

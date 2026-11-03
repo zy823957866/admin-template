@@ -1,0 +1,10 @@
+{
+	"extends": "@dt-frames/ts-config/web.json",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"]
+		}
+	},
+	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue", "vite.config.ts", "uno.config.ts"]
+}

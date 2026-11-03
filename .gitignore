@@ -1,0 +1,8 @@
+node_modules
+dist
+.turbo
+.cache
+*.log
+.DS_Store
+auto-imports.d.ts
+components.d.ts
