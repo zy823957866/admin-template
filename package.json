@@ -1,0 +1,28 @@
+{
+  "name": "@dt-frames/starter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.5.1",
+  "engines": {
+    "node": ">=20.19.0",
+    "pnpm": ">=10.0.0"
+  },
+  "scripts": {
+    "postinstall": "node scripts/fix-resolver.cjs",
+    "dev": "pnpm --filter @dt-frames/starter-web dev",
+    "build": "pnpm -r --if-present build",
+    "preview": "pnpm --filter @dt-frames/starter-web preview",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "typecheck": "pnpm -r --if-present typecheck"
+  },
+  "devDependencies": {
+    "@dt-frames/eslint-config": "^5.0.0",
+    "@dt-frames/ts-config": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "eslint": "^10.13.0",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.0"
+  }
+}

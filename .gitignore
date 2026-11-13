@@ -6,3 +6,5 @@ dist
 .DS_Store
 auto-imports.d.ts
 components.d.ts
+*.tsbuildinfo
+.pnpm-store
