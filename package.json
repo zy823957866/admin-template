@@ -10,6 +10,9 @@
   },
   "scripts": {
     "postinstall": "node scripts/fix-resolver.cjs",
+    "prepare": "husky",
+    "commit": "git-cz",
+    "lint:commit": "commitlint --last --verbose",
     "dev": "pnpm --filter @dt-frames/starter-web dev",
     "build": "pnpm -r --if-present build",
     "preview": "pnpm --filter @dt-frames/starter-web preview",
@@ -18,11 +21,21 @@
     "typecheck": "pnpm -r --if-present typecheck"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
     "@dt-frames/eslint-config": "^5.0.0",
     "@dt-frames/ts-config": "^5.0.0",
     "@types/node": "^22.0.0",
+    "commitizen": "^4.3.2",
+    "cz-git": "^1.14.0",
     "eslint": "^10.13.0",
+    "husky": "^9.1.7",
     "prettier": "^3.9.10",
     "typescript": "^5.9.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
   }
 }

@@ -42,9 +42,23 @@ pnpm lint
 
 # 全仓库格式化
 pnpm format
+
+# 交互式生成规范提交
+pnpm commit
+
+# 校验最近一次提交
+pnpm lint:commit
 ```
 
 根目录命令统一代理到对应 workspace 包，不需要进入子目录执行。
+
+## 提交规范
+
+- 首次拉取或依赖变更后执行 `pnpm install`，Husky 会自动安装 `commit-msg` 钩子。
+- 使用 `pnpm commit` 进入中文交互式提交，无需全局安装 Commitizen。
+- 提交信息遵循 `<type>(<scope>): <subject>`，例如 `feat(web): 增加登录页校验`。
+- `scope` 可选且不限白名单；本地 `git commit --no-verify` 只能绕过钩子。
+- 提交前运行 `pnpm lint` 与 `pnpm format`。
 
 ## 环境变量
 
