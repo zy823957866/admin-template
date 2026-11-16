@@ -1,0 +1,3 @@
+interface:
+  display_name: 'Dt Frame Admin Codegen'
+  short_description: 'Generate dt-frame admin modules'
